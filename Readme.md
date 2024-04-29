@@ -17,5 +17,3 @@ Usuário admin inicial
 
 "email": "israelmarmar@email.com"
 "password": "teste"
-
-A página inicial é dividida em três tabs
