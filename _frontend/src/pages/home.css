@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-family: "Open Sans", Arial, sans-serif;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  width: 200px;
+  margin: 0;
+}
+
+.custom-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 30px;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.custom-table tbody tr.white-row {
+  background-color: #fff;
+}
+
+.custom-table tbody tr.gray-row {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+/* Estilos do checkbox */
+input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+  border-width: 0;
+  appearance: none;
+}
+
+/* Estilo da checkbox quando está marcada */
+input[type="checkbox"]:checked {
+  background-color: #333;
+}
+
+/* Estilo da checkbox personalizada */
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-family: "Open Sans", Arial, sans-serif; /*  */
+}
+
+/* Estilo da checkbox personalizada quando está marcada */
+input[type="checkbox"]:checked::before {
+  background-color: #333;
+}
+
+/* styles/public/tabela.module.css */
+
+/* Estilos do checkbox e ícones de ordenação */
+.sort-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+}
+
+button {
+  border: 1px solid #333 !important;
+  background-color: white;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Open Sans", Arial, sans-serif;
+  width: 140px;
+  height: 40px;
+  color: #333;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size:10px;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+  margin-right: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+ .search {
+  width: 120px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+
+.row{
+  display: flex;
+  flex-direction:row-reverse;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+body {
+  margin: 0px !important;
+}
+
+.user-container { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 2rem;
+  width: 80%;
+}
+
+.user-container h1 {
+  margin-bottom: 1rem;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin-left: 40%;
+}
+
+.user-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.user-container input {
+  width: 100%;
+  height: 20px;
+  padding: 0.5rem;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.user-container button {
+  margin-top: 0px;
+  width: 400px;
+}
+
+.user-container label {
+  margin-left: 12px;
+}
