@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: front
+    restart: always
+    image: node:alpine
+    #build:
+    #  context: ./frontend/.
+    #  dockerfile: frontend.Dockerfile
+    stdin_open: true
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./frontend/:/app
+    command: sh -c "npm install -f && npm run build && npm start"
+    ports:
+      - 5000:3001
+  backend:
+      container_name: back
+      restart: always
+      image: node:19
+      #build:
+      #  context: ./frontend/.
+      #  dockerfile: frontend.Dockerfile
+      stdin_open: true
+      tty: true
+      working_dir: /api
+      volumes:
+        - ./backend/:/api
+      command: sh -c "npm install && npm run build && npm run migration:run && npm run seed && npm start"
+      ports:
+        - 4000:3000
+      expose:
+        - "4000"
+      networks:
+      - postgres_net
+      depends_on:
+        - postgres
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: banco
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - postgres_net
+
+volumes:
+  postgres-data:
+    driver: local
+
+networks:
+  postgres_net:
